@@ -83,7 +83,7 @@ Crear DB
 > 
 > EXIT;
 
-# Bajar e instalar wordpress
+# 5.- Bajar e instalar wordpress
 
 > wget https://wordpress.org/latest.tar.gz
 > 
@@ -95,7 +95,7 @@ Crear DB
 > 
 > sudo find /var/www/pablo -type f -exec chmod 0644 {} \;
 
-# Configurar wordpress
+# 6.- Configurar wordpress
 
 > cd /var/www/pablo
 > 
@@ -105,12 +105,12 @@ Crear DB
 
 (Configurar DB_NAME, DB_USER, DB_PASSWORD, DB_HOST)
 
-# Configurar un reverse proxy (opcional)
+# 7.- Configurar un reverse proxy (opcional)
 Agregar un location al virtualhost y agregar http://IP:PUERTO/
 
 https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/
 
-# Configurar load balancer (opcional)
+# 8.- Configurar load balancer (opcional)
 Agregar upstream al bloque http del nginx (upstream)
 
 https://phoenixnap.com/kb/nginx-reverse-proxy
