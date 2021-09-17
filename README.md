@@ -44,8 +44,11 @@ Dar permisos
 Preparar instalación certbot
 
 > sudo apt-get update
+> 
 > sudo apt-get install software-properties-common
+> 
 > sudo add-apt-repository universe
+>
 > sudo apt-get update
 
 Instalación certbot
@@ -69,24 +72,35 @@ Instalar dependencias
 Crear DB
 
 > mysql -u root -p
+> 
 > CREATE DATABASE wordpress;
+> 
 >CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'new_password_here';
+>
 > GRANT ALL ON wordpress.* TO 'wordpressuser'@'localhost' WITH GRANT OPTION;
+> 
 > FLUSH PRIVILEGES;
+> 
 > EXIT;
 
 # Bajar e instalar wordpress
 
 > wget https://wordpress.org/latest.tar.gz
+> 
 > tar -zxvf latest.tar.gz
+> 
 > sudo mv wordpress/* /var/www/pablo
+> 
 > sudo find /var/www/pablo -type d -exec chmod 0755 {} \;
+> 
 > sudo find /var/www/pablo -type f -exec chmod 0644 {} \;
 
 # Configurar wordpress
 
-> cd /var/www/pablo 
+> cd /var/www/pablo
+> 
 > sudo mv wp-config-sample.php wp-config.php
+> 
 > sudo vim wp-config.php
 
 (Configurar DB_NAME, DB_USER, DB_PASSWORD, DB_HOST)
@@ -100,4 +114,3 @@ https://www.scaleway.com/en/docs/tutorials/nginx-reverse-proxy/
 Agregar upstream al bloque http del nginx (upstream)
 
 https://phoenixnap.com/kb/nginx-reverse-proxy
-
